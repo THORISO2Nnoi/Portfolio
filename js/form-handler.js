@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show loading state
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
             
             // Submit form using Formspree
             fetch(this.action, {
@@ -41,9 +42,18 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(response => {
                 if (response.ok) {
+                    // Show success notification
                     showNotification('Thank you for your message! I will get back to you soon.', 'success');
+                    
+                    // Clear the form
                     this.reset();
+                    
+                    // Clear visual validation states
                     clearValidationStates();
+                    
+                    // Show inline success message (optional)
+                    showInlineSuccessMessage();
+                    
                 } else {
                     throw new Error('Form submission failed');
                 }
@@ -56,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Reset button
                 submitBtn.innerHTML = originalText;
                 submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
             });
         });
     }
@@ -116,7 +127,64 @@ function clearValidationStates() {
     const formGroups = document.querySelectorAll('.form-group');
     formGroups.forEach(group => {
         group.classList.remove('focused', 'valid', 'invalid');
+        
+        // Reset input icons
+        const input = group.querySelector('.form-control');
+        if (input) {
+            input.value = '';
+        }
     });
+}
+
+// Show inline success message
+function showInlineSuccessMessage() {
+    const formContainer = document.querySelector('.contact-form');
+    const existingMessage = document.querySelector('.form-success-message');
+    
+    // Remove existing message if any
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    // Create success message
+    const successMessage = document.createElement('div');
+    successMessage.className = 'form-success-message';
+    successMessage.innerHTML = `
+        <div style="
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 0.5s ease;
+        ">
+            <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 10px; color: #28a745;"></i>
+            <h3 style="margin: 10px 0; color: #155724;">Message Sent Successfully!</h3>
+            <p style="margin: 0; color: #155724;">Thank you for contacting me. I'll respond to your message as soon as possible.</p>
+        </div>
+    `;
+    
+    // Add to form
+    const form = document.getElementById('contactForm');
+    form.parentNode.insertBefore(successMessage, form.nextSibling);
+    
+    // Scroll to the success message
+    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+    // Remove message after 8 seconds
+    setTimeout(() => {
+        if (successMessage.parentNode) {
+            successMessage.style.opacity = '0';
+            successMessage.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                if (successMessage.parentNode) {
+                    successMessage.parentNode.removeChild(successMessage);
+                }
+            }, 500);
+        }
+    }, 8000);
 }
 
 // Notification function
@@ -130,7 +198,14 @@ function showNotification(message, type) {
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
-    notification.textContent = message;
+    
+    // Set icon based on type
+    const icon = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
+    
+    notification.innerHTML = `
+        <i class="fas ${icon}" style="margin-right: 10px;"></i>
+        <span>${message}</span>
+    `;
     
     // Add styles
     notification.style.cssText = `
@@ -147,16 +222,10 @@ function showNotification(message, type) {
         max-width: 300px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        background-color: ${type === 'success' ? '#28a745' : '#dc3545'};
     `;
-    
-    // Set background color based on type
-    if (type === 'success') {
-        notification.style.backgroundColor = '#28a745';
-    } else if (type === 'error') {
-        notification.style.backgroundColor = '#dc3545';
-    } else {
-        notification.style.backgroundColor = '#6c63ff';
-    }
     
     // Add to page
     document.body.appendChild(notification);
