@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Lenah Maubane</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+</head>
+<body>
+      <!-- Header -->
+<header>
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">THORISO<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="files/Lenah_Maubane_CV.pdf" download class="btn btn-small download-cv">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Projects Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>Organized by category - Explore my work across different domains</p>
+        </div>
+    </section>
+
+    <!-- Project Categories Navigation -->
+    <section class="project-categories-nav">
+        <div class="container">
+            <div class="project-categories">
+                <button class="category-btn active" data-category="all">All Projects</button>
+                <button class="category-btn" data-category="mobile">Mobile Apps</button>
+                <button class="category-btn" data-category="web">Web Applications</button>
+                <button class="category-btn" data-category="healthcare">Healthcare</button>
+                <button class="category-btn" data-category="social-impact">Social Impact</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-detail">
+        <div class="container">
+            <!-- Mobile Applications -->
+            <div class="category-section" id="mobile-apps">
+                <div class="category-title">
+                    <h2>📱 Mobile Applications</h2>
+                    <p>Native Android applications built with Kotlin and modern architecture</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- EduPath -->
+                    <div id="edupath" class="project-card detailed" data-category="mobile">
+                        <div class="project-img">
+                            <div class="project-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>EduPath - Career Guidance</h3>
+                            <p class="project-description">Android app helping Grade 9 students make informed academic and career decisions through performance analysis and personalized recommendations.</p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Academic performance analysis</li>
+                                    <li>Personalized career recommendations</li>
+                                    <li>Skills assessment tracking</li>
+                                    <li>Subject-specific career matching</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <div class="project-tags">
+                                    <div class="project-tag">Kotlin</div>
+                                    <div class="project-tag">Android</div>
+                                    <div class="project-tag">MVVM</div>
+                                    <div class="project-tag">Material Design</div>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MediConnect -->
+                    <div id="mediconnect" class="project-card detailed" data-category="mobile healthcare">
+                        <div class="project-img">
+                            <img src="images/MediConnect.png" alt="MediConnect Project" class="project-img-contained">
+                            <div class="project-status">🚧 Under Development</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>MediConnect (Patient App)</h3>
+                            <p class="project-description">Comprehensive patient management application providing seamless healthcare experience with appointment scheduling and medical history tracking.</p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Appointment scheduling</li>
+                                    <li>Medical history tracking</li>
+                                    <li>Prescription management</li>
+                                    <li>Real-time notifications</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <div class="project-tags">
+                                    <div class="project-tag">Kotlin</div>
+                                    <div class="project-tag">MongoDB</div>
+                                    <div class="project-tag">Firebase</div>
+                                    <div class="project-tag">Android</div>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MediStaff -->
+                    <div id="medistaff" class="project-card detailed" data-category="mobile healthcare">
+                        <div class="project-img">
+                            <img src="images/MediStaff.png" alt="MediStaff Project" class="project-img-contained">
+                            <div class="project-status">🚧 Under Development</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>MediStaff (Staff App)</h3>
+                            <p class="project-description">Hospital staff management application streamlining operations and improving communication within healthcare facilities.</p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Staff management dashboard</li>
+                                    <li>Shift scheduling</li>
+                                    <li>Patient assignment</li>
+                                    <li>Real-time messaging</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <div class="project-tags">
+                                    <div class="project-tag">Kotlin</div>
+                                    <div class="project-tag">Firebase</div>
+                                    <div class="project-tag">Android</div>
+                                    <div class="project-tag">Real-time DB</div>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Applications -->
+            <div class="category-section" id="web-apps">
+                <div class="category-title">
+                    <h2>🌐 Web Applications</h2>
+                    <p>Responsive web applications with modern technologies and user-friendly interfaces</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="projects-grid">
+                
+                    <!-- GBV Support System -->
+                    <div id="gbv" class="project-card detailed" data-category="web social-impact">
+                        <div class="project-img">
+                            <div class="project-icon project-icon-gbv">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>GBV Support System</h3>
+                            <p class="project-description">Comprehensive platform providing real-time emergency assistance and support resources for gender-based violence situations.</p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Emergency alert system</li>
+                                    <li>Anonymous counseling chat</li>
+                                    <li>Location sharing</li>
+                                    <li>Resource directory</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <div class="project-tags">
+                                    <div class="project-tag">Node.js</div>
+                                    <div class="project-tag">MongoDB</div>
+                                    <div class="project-tag">Socket.io</div>
+                                    <div class="project-tag">Express.js</div>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://gbv-kappa.vercel.app" target="_blank" rel="noopener" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/THORISO2Nnoi/GBV" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ElectroShop -->
+                    <div id="electroshop" class="project-card detailed" data-category="web">
+                        <div class="project-img">
+                            <div class="project-icon project-icon-electroshop">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>ElectroShop E-Commerce</h3>
+                            <p class="project-description">Modern electronics e-commerce platform with complete shopping cart, order tracking, and responsive design.</p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Product catalog & search</li>
+                                    <li>Shopping cart system</li>
+                                    <li>Order tracking</li>
+                                    <li>Payment integration</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <div class="project-tags">
+                                    <div class="project-tag">HTML5</div>
+                                    <div class="project-tag">CSS3</div>
+                                    <div class="project-tag">JavaScript</div>
+                                    <div class="project-tag">Responsive</div>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://THORISO2Nnoi.github.io/Electronics/" target="_blank" rel="noopener" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/THORISO2Nnoi/Electronics" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calculator -->
+                    <div id="calculator" class="project-card detailed" data-category="web">
+                        <div class="project-img">
+                            <div class="project-icon project-icon-calculator">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Advanced Calculator</h3>
+                            <p class="project-description">Feature-rich web calculator with advanced mathematical functions and file processing capabilities.</p>
+                            <div class="project-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Advanced math functions</li>
+                                    <li>File processing</li>
+                                    <li>Memory operations</li>
+                                    <li>Responsive design</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <div class="project-tags">
+                                    <div class="project-tag">HTML5</div>
+                                    <div class="project-tag">CSS3</div>
+                                    <div class="project-tag">JavaScript</div>
+                                    <div class="project-tag">File API</div>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://THORISO2Nnoi.github.io/Calculator/" target="_blank" rel="noopener" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://thoriso2nnoi.github.io/Calculator/" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+    <!-- Skills Section -->
+    <section class="skills-showcase">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technologies I Use</h2>
+                <p>Across all my projects</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">Kotlin</div>
+                        <div class="skill-item">Android Studio</div>
+                        <div class="skill-item">Java</div>
+                        <div class="skill-item">MVVM Architecture</div>
+                        <div class="skill-item">Material Design</div>
+                        <div class="skill-item">Firebase</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Web Development</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">HTML5</div>
+                        <div class="skill-item">CSS3</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">Node.js</div>
+                        <div class="skill-item">Express.js</div>
+                        <div class="skill-item">MongoDB</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Design</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">Git & GitHub</div>
+                        <div class="skill-item">Figma</div>
+                        <div class="skill-item">Postman</div>
+                        <div class="skill-item">VS Code</div>
+                        <div class="skill-item">Android Studio</div>
+                        <div class="skill-item">Render</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Lenah Maubane</h3>
+                    <p>Full-Stack Developer specializing in mobile and web applications.</p>
+                   <div class="social-links">
+                       <a href="https://www.linkedin.com/in/thoriso-maubane-240b10207/" target="_blank" rel="noopener" title="LinkedIn">
+                         <img src="images/Linkedin.png" alt="LinkedIn" class="social-media-image">
+                       </a>
+                       <a href="https://github.com/THORISO2Nnoi" target="_blank" rel="noopener" title="GitHub">
+                         <img src="images/GitHub.png" alt="GitHub" class="social-media-image">
+                       </a>
+                       <a href="https://www.instagram.com/thorisomaubane/" target="_blank" rel="noopener" title="Instagram">
+                         <img src="images/instagram.png" alt="Instagram" class="social-media-image">
+                       </a>
+                   </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">App Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Cloud Integration</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Lenah Nnoi Thoriso Maubane. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Category Filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Filter projects
+                    projectCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category').includes(category)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
